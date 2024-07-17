@@ -56,16 +56,12 @@ const Jobs = () => {
           <div className="card-title-container">
             <h5 className="card-title" style={{padding:"5px", fontSize: "25px"}}>{job.company}</h5>
             <h5 className="card-title" style={{padding:"5px", fontSize: "18px", color: 'blue'}}>{job.position}</h5>
-            {/* <p className="card-company">{job.company}</p> */}
           </div>
         </div>
         <div className="card-body">
           <div className="card-info">
             <i className="fas fa-map-marker-alt"></i> {job.location}
           </div>
-          {/* <div className="card-status" style={{ padding: "10px" }}>
-            <span className={`status ${job.status.toLowerCase()}`}>{job.position}</span>
-          </div> */}
           <div className="card-status" style={{ padding: "10px" }}>
             <span className={`status ${job.status.toLowerCase()}`}>{job.status}</span>
           </div>

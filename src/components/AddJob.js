@@ -43,7 +43,6 @@ const AddJob = () => {
           }
         )
         navigate('/all-jobs')
-        console.log(data);
       } catch (err) {
         console.log(err);
       }
@@ -64,7 +63,6 @@ const AddJob = () => {
           }
         );
         navigate('/all-jobs')
-        console.log(data);
       } catch (err) {
         console.log(err);
       }

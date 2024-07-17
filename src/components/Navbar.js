@@ -7,12 +7,9 @@ const Navbar = () => {
   const navigate = useNavigate()
   const { setCurrentUser } = useContext(AuthContext);
   const logout = () => {
-    console.log("this");
     localStorage.clear()
     setCurrentUser(null)
-    console.log("what");
     navigate('/register')
-    console.log("yes");
   }
   return (
     <nav>

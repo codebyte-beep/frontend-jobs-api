@@ -29,7 +29,6 @@ const Register = () => {
         }
         if (isMember) {
             // login
-            console.log("wowo");
             try{
                 const data = await login(email, password);
                 localStorage.setItem('token', data.token)

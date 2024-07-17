@@ -9,8 +9,6 @@ import { Navigate, BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   const { currentUser } = useContext(AuthContext);
   const ProtectedRoute = ({ children }) => {
-    console.log("bian");
-    console.log(currentUser);
     if (!currentUser) {
       return <Navigate to="/register" />;
     }
