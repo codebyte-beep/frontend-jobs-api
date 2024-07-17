@@ -1,0 +1,298 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.sidebar {
+    width: 28.57vw;
+    /* 2/7 of the viewport width */
+}
+
+.main {
+    width: 71.43vw;
+    /* 5/7 of the viewport width */
+}
+
+.jobs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    margin-bottom: 16px;
+  }
+  
+  .card-header {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .card-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+  
+  .card-title-container {
+    flex-grow: 1;
+  }
+  
+  .card-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .card-company {
+    margin: 0;
+    color: #6c757d;
+    font-size: 0.875rem;
+  }
+  
+  .card-body {
+    padding: 16px;
+  }
+  
+  .card-info {
+    display: flex;
+    align-items: center;
+    color: #6c757d;
+    margin-bottom: 8px;
+  }
+  
+  .card-info i {
+    margin-right: 8px;
+  }
+  
+  .card-status .status {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .status.pending {
+    background-color: #ffc107;
+    color: #fff;
+  }
+  
+  .status.approved {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .status.rejected {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .card-footer {
+    padding: 16px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .btn-edit {
+    background: #d4edda;
+    border: none;
+    color: #155724;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 4px;
+  }
+  
+  .btn-delete {
+    background: #f8d7da;
+    border: none;
+    color: #721c24;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 4px;
+  }
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clear-btn, 
+.submit-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.clear-btn {
+    background-color: #ccc;
+    color: white;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Navbar.css */
+
+nav {
+  background-color: #333;
+  padding: 1rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: #555;
+}
+
+a.active {
+  background-color: #555;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.right-links {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  ul {
+    flex-direction: column;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+}
+
+.form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: auto;
+}
+
+.form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-row {
+  margin-bottom: 15px;
+}
+
+.form-row label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-row input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
