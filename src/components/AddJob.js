@@ -30,7 +30,7 @@ const AddJob = () => {
     if (job) {
       // Update existing job
       try {
-        const { data } = await axios.patch(`https://jobs-api-06-1.onrender.com/api/v1/jobs/${job._id}`,
+        await axios.patch(`https://jobs-api-06-1.onrender.com/api/v1/jobs/${job._id}`,
           {
             company: values.company,
             position: values.position,
@@ -50,7 +50,7 @@ const AddJob = () => {
     }
     else {
       try {
-        const { data } = await axios.post('https://jobs-api-06-1.onrender.com/api/v1/jobs/',
+        await axios.post('https://jobs-api-06-1.onrender.com/api/v1/jobs/',
           {
             company: values.company,
             position: values.position,
@@ -102,10 +102,11 @@ const AddJob = () => {
         {/* password field */}
         <FormRow
           type='text'
-          name='status'
+          name= 'status'
           value={values.status}
           handleChange={handleChange}
-        />
+          />
+          {/* <div>pending, interview or declined</div> */}
         <button type='submit' className='btn btn-block'>
           {job ? 'Update' : 'Submit'}
         </button>
