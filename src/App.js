@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import Jobs from './components/Jobs'
 import AddJob from './components/AddJob'
+import ApplyJobs from './components/ApplyJobs';
 import { AuthContext } from "./context/AuthContext";
 import { useContext } from 'react';
 import Register from './components/Register';
@@ -22,6 +23,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Register />} />
         <Route path="/register" element={<Register />} />
+        <Route
+          path="/apply-jobs"
+          element={
+            <ProtectedRoute>
+              <ApplyJobs />
+            </ProtectedRoute>
+          }
+        />
         <Route
           path="/add-jobs"
           element={

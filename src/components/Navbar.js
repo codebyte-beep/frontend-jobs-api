@@ -15,6 +15,9 @@ const Navbar = () => {
     <nav>
       <ul>
         <li>
+          <Link to="/apply-jobs">Apply Jobs</Link>
+        </li>
+        <li>
           <Link to="/add-jobs">Add Job</Link>
         </li>
         <li>

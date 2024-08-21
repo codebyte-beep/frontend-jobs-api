@@ -43,6 +43,36 @@ const Jobs = () => {
     }
 
   };
+  const handleDownloadResumes = async (jobId) => {
+    try {
+      const response = await axios.get(`http://localhost:3000/api/v1/jobs/${jobId}/download`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        responseType: 'blob', // Ensure binary data is handled correctly
+      });
+  
+      // Create a Blob from the data and a URL for it
+      const blob = new Blob([response.data], { type: 'application/zip' });
+      const url = window.URL.createObjectURL(blob);
+  
+      // Create a link and trigger the download
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', `resumes-${jobId}.zip`); // Change the filename as needed
+      document.body.appendChild(link);
+      link.click();
+  
+      // Clean up the link after download
+      link.remove();
+      window.URL.revokeObjectURL(url);
+  
+    } catch (err) {
+      console.error('Failed to download resumes:', err);
+      alert("no applications")
+    }
+  };
+  
 
   if (isLoading) {
     return <div>Loading...</div>; // Replace with your spinner component
@@ -72,6 +102,7 @@ const Jobs = () => {
         <div className="card-footer">
           <button onClick={() => handleEdit(job)} className="btn-edit">Edit</button>
           <button onClick={() => handleDelete(job._id)} className="btn-delete">Delete</button>
+          <button onClick={() => handleDownloadResumes(job._id)} className="btn-view-resumes">View Resumes</button>
         </div>
       </div>
     ))}
