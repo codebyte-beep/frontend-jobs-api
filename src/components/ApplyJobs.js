@@ -10,7 +10,7 @@ const ApplyJobs = () => {
   useEffect(() => {
     const fetch = async () => {
       try {
-        const { data } = await axios.get('http://localhost:3000/api/v1/jobs/apply-jobs', {
+        const { data } = await axios.get('https://jobs-api-06-1.onrender.com/api/v1/jobs/apply-jobs', {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -39,7 +39,7 @@ const ApplyJobs = () => {
     formData.append('resume', selectedFile);
 
     try {
-      await axios.post(`http://localhost:3000/api/v1/jobs/${jobId}/upload`, formData, {
+      await axios.post(`https://jobs-api-06-1.onrender.com/api/v1/jobs/${jobId}/upload`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',

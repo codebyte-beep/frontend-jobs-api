@@ -45,7 +45,7 @@ const Jobs = () => {
   };
   const handleDownloadResumes = async (jobId) => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/v1/jobs/${jobId}/download`, {
+      const response = await axios.get(`https://jobs-api-06-1.onrender.com/api/v1/jobs/${jobId}/download`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
